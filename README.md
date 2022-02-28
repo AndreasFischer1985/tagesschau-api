@@ -4,16 +4,24 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.
 
+
+## API2
+
+**URL:** https://www.tagesschau.de/api2/
+
+API2 tritt die Nachfolge der vorangegangenen API an (vgl. https://www.tagesschau.de/api/), die nach eigenen Angaben seit 01.10.2018 obsolet ist (obwohl unter Endpunkten wie 
+https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/) durchaus noch Beiträge aus dem aktuellen Jahr zu finden sind.
+
 ## Homepage
 
-**URL:** https://www.tagesschau.de/api2/homepage
+**URL:** https://www.tagesschau.de/api2/homepage/
 
 Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind.
 
 
 ## News
 
-**URL:** https://www.tagesschau.de/api2/news
+**URL:** https://www.tagesschau.de/api2/news/
 
 Aktuelle Nachrichten, die über GET-Parameter gefiltert werden können:
 
@@ -43,7 +51,7 @@ Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6
 - inland
 - ausland
 - wirtschaft
-- sport 	
+- sport	
 
 Ressort/Themengebiet
 
@@ -57,7 +65,7 @@ Newsfeed zu ausgewähltem Datum, gefiltert über den Pfad-Parameter **datumsanga
 
 ## Search
 
-**URL:** https://www.tagesschau.de/api2/search
+**URL:** https://www.tagesschau.de/api2/search/
 
 
 **Parameter:** *searchText* 
@@ -77,21 +85,21 @@ Suchergebnisse pro Seite (1-30)
 
 ## Ressorts
 
-**URL:** https://www.tagesschau.de/api2/{ressort}
+**URL:** https://www.tagesschau.de/api2/{ressort}/
 
 Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft) 
 
 
 ## Channels
 
-**URL:** https://www.tagesschau.de/api2/channels
+**URL:** https://www.tagesschau.de/api2/channels/
 
 Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache
 
 
 ## Multimedia
 
-**URL:** https://www.tagesschau.de/api2/multimedia
+**URL:** https://www.tagesschau.de/api2/multimedia/
 
 Multimedia-Beiträge.
 
@@ -99,5 +107,5 @@ Multimedia-Beiträge.
 ## Beispiel
 
 ```bash
-tagesschau=$(curl -m 60 https://www.tagesschau.de/api2/homepage)
+tagesschau=$(curl -m 60 https://www.tagesschau.de/api2/homepage/)
 ```
