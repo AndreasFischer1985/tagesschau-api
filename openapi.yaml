@@ -1,0 +1,600 @@
+﻿openapi: "3.0.0"
+info:
+  description: "Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland), die von ARD-aktuell in Hamburg produziert und mehrmals täglich ausgestrahlt wird. ARD-aktuell ist seit 1977 die zentrale Fernsehnachrichtenredaktion der ARD, bei welcher es sich wiederum um einen Rundfunkverbund handelt, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht.<br>Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.<br>"
+  version: "1.0.0"
+  title: "Tagesschau API"
+
+servers:
+  - url: "https://www.tagesschau.de/api2"
+
+paths:
+
+  /homepage:
+    get:
+      summary: "Nachrichten und Eilmeldungen"	 
+      description: "Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind"
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/HomepageResponse'
+
+
+  /news:
+    get:
+      summary: "Aktuelle Nachrichten"
+      description: "Aktuelle Nachrichten"
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/NewsResponse'
+      parameters:
+        - in: query
+          name: regions
+          schema:
+            type: string
+            enum:
+                - 1
+                - 2
+                - 3
+                - 4
+                - 5
+                - 6
+                - 7
+                - 8
+                - 9
+                - 10
+                - 11
+                - 12
+                - 13
+                - 14
+                - 15
+                - 16
+          description: Bundesland - 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Hamburg, 7=Hessen, 8=Mecklenburg-Vorpommern, 9=Niedersachsen, 10=Nordrhein-Westfalen, 11=Rheinland-Pfalz, 12=Saarland, 13=Sachsen, 14=Sachsen-Anhalt, 15=Schleswig-Holstein, 16=Thüringen. Mehrere Komma-getrennte Angaben möglich (z.B. regions=1,2).
+          example: 1,2
+          required: false
+
+        - in: query
+          name: ressort
+          schema:
+            type: string
+            enum:
+                - inland
+                - ausland
+                - wirtschaft
+                - sport	
+          example: ausland
+          description: Ressort/Themengebiet
+          required: false
+
+
+  /newsfeed-101~_date-{datumsangabe}.json:
+    get:
+      summary: "Newsfeed"	 
+      description: "Newsfeed zu ausgewähltem Datum im Format yymmdd (z.B. 220228 für den 28.02.2022)."
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/NewsResponse'
+      parameters:
+        - in: path
+          name: datumsangabe
+          schema:
+            type: string
+            example: 220228
+          required: true
+
+  /search:
+    get:
+      summary:	 "Suche"
+      description: "Suche"
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/SearchResponse'
+      parameters:
+ 
+        - in: query
+          name: searchText
+          schema:
+            type: string
+          description: Suchbegriff
+          example: Ukraine
+          required: false
+        - in: query
+          name: pageSize
+          schema:
+            type: string
+          description: Seite
+          example: 0
+          required: false
+        - in: query
+          name: resultPage
+          schema:
+            type: string
+          description: Suchergebnisse pro Seite (1-30)
+          example: 2
+          required: false
+
+  /{ressort}:
+    get:
+      summary:	 "Ressort-spezifische Nachrichten"
+      description: "Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft)."
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/NewsResponse'
+      parameters:
+        - in: path
+          name: ressort
+          schema:
+            type: string
+            example: ausland
+          required: true
+
+  /channels:
+    get:
+      summary:	 "Aktuelle Kanäle"
+      description: "Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache"
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/NewsResponse'
+
+  /multimedia:
+    get:
+      summary:	 "Multimedia"
+      description: "Multimedia-Beiträge"
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/MultimediaResponse'
+
+components: 
+  schemas:    
+
+    HomepageResponse:
+      type: object
+      properties:
+        news: 
+          type: array
+          items:
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              regionId:
+                type: string
+              updateCheckUrl:
+                type: string
+              images:
+                type: array
+                items:
+                  type: object     
+              streams:
+                type: object
+              copyright:
+                type: string
+                example: ""
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: string
+              crop:
+                type: object
+              ressort:
+                type: string
+                example: ausland
+              type:
+                type: string
+              breakingNews:
+                type: boolean
+              firstFrame:
+                type: object
+        regional: 
+          type: array
+          items:
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              regionId:
+                type: string
+              images:
+                type: array
+                items:
+                  type: object     
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: string
+              brandingImage:
+                type: object
+              type:
+                type: string
+                example: story
+              breakingNews:
+                type: boolean
+        newStoriesCountLink: 
+          type: string
+          example: "https://www.tagesschau.de/api2/indexfeedcount-101.json?state=YdphL1CNXIsJ33egKMFCo7yZ9%2FBgxRy3VBMYH%2B4gXtyYxqph5eBf433P%2BmTx36pT3TNwNBsqS9LGyGTm%2BFNP6Ykcuvx4dwpECIpSHNwOVMzasdtSPFocAe%2FlGxV597w39uXLjqQTyImeeJiLS6fxvQ%3D%3D"
+        type:
+          type: string
+          example: news
+
+    NewsResponse:
+      type: object
+      properties:
+        news: 
+          type: array
+          items: 
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              date:
+                type: string
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              regionId:
+                type: integer
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: array
+                items:
+                  type: object
+        regional: 
+          type: array
+          items:
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              regionId:
+                type: string
+              images:
+                type: array
+                items:
+                  type: object     
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: string
+              brandingImage:
+                type: object
+              type:
+                type: string
+                example: story
+              breakingNews:
+                type: boolean
+        newStoriesCountLink: 
+          type: array
+          items:
+            type: object
+        type: 
+          type: string
+          example: "news page"
+        nextPage: 
+          type: string
+          example: "https://www.tagesschau.de/api2/newsfeed-101~_date-220227.json"
+
+
+    SearchResponse:
+      type: object
+      properties:
+        type: 
+          type: string
+          example: search
+        sophoraId: 
+          type: string
+        trackingPixels: 
+          type: array
+          items:
+            type: object
+        details: 
+          type: string
+        detailsWeb: 
+          type: string
+        date: 
+          type: string
+        searchText: 
+          type: string
+          example: Ukraine
+        query: 
+          type: string
+          example: "searchField_t:Ukraine"
+        totalItemCount: 
+          type: integer
+          example: 1501
+        SolrQuery: 
+          type: string
+          example: "dateTime_dt:[NOW-30DAY TO NOW] AND (primaryType_s:\"sophora-content-nt:story\" OR primaryType_s:\"sophora-content-nt:video\" OR primaryType_s:\"sophora-content-nt:broadcast\") AND -(primaryType_s:\"sophora-content-nt:video\" AND (headline_s:\"Ganze Sendung\" OR sophora-content_contentType_s:sendung))"
+        searchResults:
+          type: array 
+          items: 
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              date:
+                type: string
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              streams:
+                type: object
+              copyright:
+                type: string
+                example: ""
+              type:
+                type: string
+                example: "video"
+              alttext:
+                type: string
+                example: "Sendungsbild"
+
+    ChannelsResponse:
+      type: object
+      properties:
+        channels:
+          type: array
+          items:
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              streams:
+                type: object
+              copyright:
+                type: string
+                example: ""
+              type:
+                type: string
+                example: "video"
+              alttext:
+                type: string
+                example: "tagesschau24"
+        type:
+          type: string
+          example: "channels" 
+
+
+    MultimediaResponse:
+      type: object
+      properties:
+        news: 
+          type: array
+          items: 
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              date:
+                type: string
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              regionId:
+                type: integer
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: array
+                items:
+                  type: object
+        regional: 
+          type: array
+          items:
+            type: object
+            properties:
+              sophoraId:
+                type: string
+              externalId:
+                type: string
+              title:
+                type: string
+              teaserImage:
+                type: object
+              tracking:
+                type: array
+                items:
+                  type: object
+              tags:
+                type: array
+                items:
+                  type: object
+              updateCheckUrl:
+                type: string
+              regionId:
+                type: string
+              images:
+                type: array
+                items:
+                  type: object     
+              details:
+                type: string
+              detailsweb:
+                type: string
+              shareURL:
+                type: string
+              topline:
+                type: string
+              firstSentence:
+                type: string
+              geotags:
+                type: string
+              brandingImage:
+                type: object
+              type:
+                type: string
+                example: story
+              breakingNews:
+                type: boolean
+        newStoriesCountLink: 
+          type: string
+        type: 
+          type: string
+          example: news
