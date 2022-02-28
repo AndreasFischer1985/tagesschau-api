@@ -52,6 +52,7 @@ Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6
 - ausland
 - wirtschaft
 - sport	
+- video
 
 Ressort/Themengebiet
 

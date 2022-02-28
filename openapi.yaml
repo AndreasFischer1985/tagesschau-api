@@ -79,7 +79,8 @@ paths:
                 - inland
                 - ausland
                 - wirtschaft
-                - sport	
+                - sport
+                - video		
           example: ausland
           description: Ressort/Themengebiet
           required: false
