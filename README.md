@@ -9,8 +9,8 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 **URL:** https://www.tagesschau.de/api2/
 
-API2 tritt die Nachfolge der vorangegangenen API an (vgl. https://www.tagesschau.de/api/), die nach eigenen Angaben seit 01.10.2018 obsolet ist (obwohl unter Endpunkten wie 
-https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/) durchaus noch Beiträge aus dem aktuellen Jahr zu finden sind.
+API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind).
+
 
 ## Homepage
 

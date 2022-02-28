@@ -9,10 +9,22 @@ servers:
 
 paths:
 
+  /:
+    get:
+      summary: "Wichtige Nachrichten und Eilmeldungen"	 
+      description: "Teilmenge der Nachrichten und Eilmeldungen aus dem Pfad '/news/', sowie regionale Nachrichten aus dem Pfad '/homepage/'. API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind)."
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/HomepageResponse'
+
   /homepage/:
     get:
-      summary: "Nachrichten und Eilmeldungen"	 
-      description: "Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind"
+      summary: "Ausgewählte Nachrichten und Eilmeldungen"	 
+      description: "Nachrichten und Eilmeldungen aus dem Pfad '/news/', sowie regionale Nachrichten, die auf der Startseite der Tagesschau-App zu sehen sind"
       responses:
         '200':
             description: OK
@@ -24,7 +36,7 @@ paths:
 
   /news/:
     get:
-      summary: "Aktuelle Nachrichten"
+      summary: "Alle Nachrichten und Eilmeldungen"
       description: "Aktuelle Nachrichten"
       responses:
         '200':
