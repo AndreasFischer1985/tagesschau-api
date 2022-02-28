@@ -1,4 +1,4 @@
-﻿# Tagesschau API
+# Tagesschau API
 
 Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland), die von ARD-aktuell in Hamburg produziert und mehrmals täglich ausgestrahlt wird. ARD-aktuell ist seit 1977 die zentrale Fernsehnachrichtenredaktion der ARD, bei welcher es sich wiederum um einen Rundfunkverbund handelt, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht. 
 
@@ -6,11 +6,10 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 ## Homepage
 
-**URL:** https://www.tagesschau.de/api2/
-
-https://www.tagesschau.de/api2/homepage
+**URL:** https://www.tagesschau.de/api2/homepage
 
 Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind.
+
 
 ## News
 
