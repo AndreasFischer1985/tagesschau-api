@@ -18,34 +18,34 @@ Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen
 Aktuelle Nachrichten, die über GET-Parameter gefiltert werden können:
 
 **Parameter:** *regions* 
--1
--2
--3
--4
--5
--6
--7
--8
--9
--10
--11
--12
--13
--14
--15
--16
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
 
 Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Hamburg, 7=Hessen, 8=Mecklenburg-Vorpommern, 9=Niedersachsen, 10=Nordrhein-Westfalen, 11=Rheinland-Pfalz, 12=Saarland, 13=Sachsen, 14=Sachsen-Anhalt, 15=Schleswig-Holstein, 16=Thüringen. Mehrere Komma-getrennte Angaben möglich (z.B. regions=1,2).
 
 
 **Parameters:** *ressort*
 
--inland
--ausland
--wirtschaft
--sport 	
+- inland
+- ausland
+- wirtschaft
+- sport 	
 
-Themengebiet
+Ressort/Themengebiet
 
 
 ## Newsfeed
