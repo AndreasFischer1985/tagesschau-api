@@ -1,3 +1,5 @@
+[[DE]](README.md)/[[EN]](README_en.md)
+
 # Tagesschau API
 
 Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland), die von ARD-aktuell in Hamburg produziert und mehrmals täglich ausgestrahlt wird. ARD-aktuell ist seit 1977 die zentrale Fernsehnachrichtenredaktion der ARD, bei welcher es sich wiederum um einen Rundfunkverbund handelt, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht. 
@@ -9,6 +11,8 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 **URL:** https://www.tagesschau.de/api2/
 
+Wichtige Nachrichten und Eilmeldungen, sowie regionale Nachrichten aus dem Pfad '/homepage/'. 
+
 API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind).
 
 
@@ -16,7 +20,7 @@ API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben se
 
 **URL:** https://www.tagesschau.de/api2/homepage/
 
-Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind.
+Ausgewählte Nachrichten und Eilmeldungen, die auf der Startseite der Tagesschau-App zu sehen sind.
 
 
 ## News
@@ -61,7 +65,7 @@ Ressort/Themengebiet
 
 **URL:** https://www.tagesschau.de/api2/newsfeed-101~_date-{datumsangabe}.json
 
-Newsfeed zu ausgewähltem Datum, gefiltert über den Pfad-Parameter **datumsangabe** im Format yymmdd (z.B. 220228 für den 28.02.2022").
+Nachrichten und Eilmeldungen zum ausgewählten Datum, gefiltert über den Pfad-Parameter **datumsangabe** im Format yymmdd (z.B. 220228 für den 28.02.2022").
 
 
 ## Search
@@ -71,7 +75,7 @@ Newsfeed zu ausgewähltem Datum, gefiltert über den Pfad-Parameter **datumsanga
 
 **Parameter:** *searchText* 
 
-Suchbegriff
+Suchtext
 
 
 **Parameter:** *resultPage* 
@@ -95,7 +99,7 @@ Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** 
 
 **URL:** https://www.tagesschau.de/api2/channels/
 
-Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache
+Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)
 
 
 ## Multimedia

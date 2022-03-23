@@ -1,6 +1,8 @@
 ﻿openapi: "3.0.0"
 info:
-  description: "Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland), die von ARD-aktuell in Hamburg produziert und mehrmals täglich ausgestrahlt wird. ARD-aktuell ist seit 1977 die zentrale Fernsehnachrichtenredaktion der ARD, bei welcher es sich wiederum um einen Rundfunkverbund handelt, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht.<br>Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.<br>"
+  description: "The Tagesschau is a news program of the ARD (abbreviation for 'Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland’), which is produced by ARD-aktuell in Hamburg and broadcast several times a day. ARD-aktuell has been the central television news department of ARD since 1977, which in turn is a broadcasting association consisting of the state broadcasting corporations and Deutsche Welle.
+<br>
+Current news and media articles are available in JSON format on [www.tagesschau.de](https://www.tagesschau.de) via the API documented here.<br>"
   version: "2.0.0"
   title: "Tagesschau API"
 
@@ -11,8 +13,8 @@ paths:
 
   /:
     get:
-      summary: "Wichtige Nachrichten und Eilmeldungen"	 
-      description: "Wichtige Nachrichten und Eilmeldungen, sowie regionale Nachrichten aus dem Pfad '/homepage/'. API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind)."
+      summary: "Important news and breaking news"	 
+      description: "Important news and breaking news, as well as regional news from path '/homepage/'. API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/)."
       responses:
         '200':
             description: OK
@@ -23,8 +25,8 @@ paths:
 
   /homepage/:
     get:
-      summary: "Ausgewählte aktuelle Nachrichten und Eilmeldungen"	 
-      description: "Ausgewählte aktuelle Nachrichten und Eilmeldungen, sowie regionale Nachrichten, die auf der Startseite der Tagesschau-App zu sehen sind."
+      summary: "Selected news and breaking news"	 
+      description: "Selected news and breaking news that are shown on the homepage of the Tagesschau app."
       responses:
         '200':
             description: OK
@@ -36,8 +38,8 @@ paths:
 
   /news/:
     get:
-      summary: "Aktuelle Nachrichten und Eilmeldungen"
-      description: "Aktuelle Nachrichten und Eilmeldungen"
+      summary: "Current news and breaking news"
+      description: "Current news and breaking news"
       responses:
         '200':
             description: OK
@@ -67,7 +69,7 @@ paths:
                 - 14
                 - 15
                 - 16
-          description: Bundesland - 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Hamburg, 7=Hessen, 8=Mecklenburg-Vorpommern, 9=Niedersachsen, 10=Nordrhein-Westfalen, 11=Rheinland-Pfalz, 12=Saarland, 13=Sachsen, 14=Sachsen-Anhalt, 15=Schleswig-Holstein, 16=Thüringen. Mehrere Komma-getrennte Angaben möglich (z.B. regions=1,2).
+          description: State - 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Hamburg, 7=Hessen, 8=Mecklenburg-Vorpommern, 9=Niedersachsen, 10=Nordrhein-Westfalen, 11=Rheinland-Pfalz, 12=Saarland, 13=Sachsen, 14=Sachsen-Anhalt, 15=Schleswig-Holstein, 16=Thüringen. Multiple comma-separated specifications possible (e.g. regions=1,2).
           example: 1,2
           required: false
 
@@ -82,14 +84,14 @@ paths:
                 - sport
                 - video		
           example: ausland
-          description: Ressort/Themengebiet
+          description: Department/subject area
           required: false
 
 
   /newsfeed-101~_date-{datumsangabe}.json:
     get:
       summary: "Newsfeed"	 
-      description: "Nachrichten und Eilmeldungen zu einem ausgewählten Datum der jüngeren Vergangenheit (bis zu etwa einem Monat) im Format yymmdd (z.B. 220228 für den 28.02.2022)."
+      description: "News and breaking news on a selected date in the recent past (up to about a month), filtered using the path parameter **datumsangabe** in the format yymmdd (e.g. 220228 for 02/28/2022)."
       responses:
         '200':
             description: OK
@@ -107,8 +109,8 @@ paths:
 
   /search/:
     get:
-      summary:	 "Suche"
-      description: "Suche"
+      summary:	 "Search"
+      description: "Search"
       responses:
         '200':
             description: OK
@@ -122,28 +124,28 @@ paths:
           name: searchText
           schema:
             type: string
-          description: Suchtext
+          description: search text
           example: Ukraine
           required: false
         - in: query
           name: pageSize
           schema:
             type: string
-          description: Seite
+          description: page
           example: 0
           required: false
         - in: query
           name: resultPage
           schema:
             type: string
-          description: Suchergebnisse pro Seite (1-30)
+          description: Search results per page (1-30)
           example: 2
           required: false
 
   /{ressort}/:
     get:
-      summary:	 "Ressort-spezifische Nachrichten"
-      description: "Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft)."
+      summary:	 "Department-specific messages"
+      description: "Department-specific messages, filtered via the path parameter **ressort** (e.g. inland, ausland or wirtschaft)"
       responses:
         '200':
             description: OK
@@ -161,8 +163,8 @@ paths:
 
   /channels/:
     get:
-      summary:	 "Aktuelle Kanäle"
-      description: "Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache"
+      summary:	 "Current channels"
+      description: "Current channels (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)"
       responses:
         '200':
             description: OK
@@ -174,7 +176,7 @@ paths:
   /multimedia/:
     get:
       summary:	 "Multimedia"
-      description: "Multimedia-Beiträge"
+      description: "Multimedia content"
       responses:
         '200':
             description: OK
