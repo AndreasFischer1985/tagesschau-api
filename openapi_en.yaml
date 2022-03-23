@@ -7,14 +7,15 @@ Current news and media articles are available in JSON format on [www.tagesschau.
   title: "Tagesschau API"
 
 servers:
-  - url: "https://www.tagesschau.de/api2"
+  - url: "https://www.tagesschau.de"
 
 paths:
 
-  /:
+  /api2:
     get:
-      summary: "Important news and breaking news"	 
-      description: "Important news and breaking news, as well as regional news from path '/homepage/'. API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/)."
+      summary: "Important news and breaking news"
+      description: "Important news and breaking news, as well as regional news from path '/api2/homepage'. API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/)."
+      operationId: "api2"
       responses:
         '200':
             description: OK
@@ -23,10 +24,11 @@ paths:
                 schema:
                   $ref: '#/components/schemas/HomepageResponse'
 
-  /homepage/:
+  /api2/homepage:
     get:
-      summary: "Selected news and breaking news"	 
+      summary: "Selected news and breaking news"
       description: "Selected news and breaking news that are shown on the homepage of the Tagesschau app."
+      operationId: "homepage"
       responses:
         '200':
             description: OK
@@ -36,10 +38,11 @@ paths:
                   $ref: '#/components/schemas/HomepageResponse'
 
 
-  /news/:
+  /api2/news:
     get:
       summary: "Current news and breaking news"
       description: "Current news and breaking news"
+      operationId: "news"
       responses:
         '200':
             description: OK
@@ -88,10 +91,11 @@ paths:
           required: false
 
 
-  /newsfeed-101~_date-{datumsangabe}.json:
+  /api2/newsfeed-101~_date-{datumsangabe}.json:
     get:
-      summary: "Newsfeed"	 
+      summary: "Newsfeed"
       description: "News and breaking news on a selected date in the recent past (up to about a month), filtered using the path parameter **datumsangabe** in the format yymmdd (e.g. 220228 for 02/28/2022)."
+      operationId: "newsfeed"
       responses:
         '200':
             description: OK
@@ -107,10 +111,11 @@ paths:
             example: 220228
           required: true
 
-  /search/:
+  /api2/search:
     get:
-      summary:	 "Search"
+      summary: "Search"
       description: "Search"
+      operationId: "search"
       responses:
         '200':
             description: OK
@@ -142,10 +147,11 @@ paths:
           example: 2
           required: false
 
-  /{ressort}/:
+  /api2/{ressort}:
     get:
-      summary:	 "Department-specific messages"
+      summary: "Department-specific messages"
       description: "Department-specific messages, filtered via the path parameter **ressort** (e.g. inland, ausland or wirtschaft)"
+      operationId: "ressort"
       responses:
         '200':
             description: OK
@@ -161,22 +167,24 @@ paths:
             example: ausland
           required: true
 
-  /channels/:
+  /api2/channels:
     get:
-      summary:	 "Current channels"
+      summary: "Current channels"
       description: "Current channels (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)"
+      operationId: "channels"
       responses:
         '200':
             description: OK
             content:
               application/json:
                 schema:
-                  $ref: '#/components/schemas/NewsResponse'
+                  $ref: '#/components/schemas/ChannelsResponse'
 
-  /multimedia/:
+  /api2/multimedia:
     get:
-      summary:	 "Multimedia"
+      summary: "Multimedia"
       description: "Multimedia content"
+      operationId: "multimedia"
       responses:
         '200':
             description: OK

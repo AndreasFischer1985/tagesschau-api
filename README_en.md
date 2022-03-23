@@ -11,7 +11,7 @@ Current news and media articles are available in JSON format on [www.tagesschau.
 
 **URL:** https://www.tagesschau.de/api2/
 
-Important news and breaking news, as well as regional news from path '/homepage/'. 
+Important news and breaking news, as well as regional news from path 'api2/homepage/'. 
 
 API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/).
 
