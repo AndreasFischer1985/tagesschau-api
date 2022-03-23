@@ -51,7 +51,7 @@ paths:
         - in: query
           name: regions
           schema:
-            type: string
+            type: integer
             enum:
                 - 1
                 - 2
