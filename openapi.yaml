@@ -68,7 +68,7 @@ paths:
                 - 15
                 - 16
           description: Bundesland - 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Hamburg, 7=Hessen, 8=Mecklenburg-Vorpommern, 9=Niedersachsen, 10=Nordrhein-Westfalen, 11=Rheinland-Pfalz, 12=Saarland, 13=Sachsen, 14=Sachsen-Anhalt, 15=Schleswig-Holstein, 16=Thüringen. Mehrere Komma-getrennte Angaben möglich (z.B. regions=1,2).
-          example: 1,2
+          example: 1
           required: false
 
         - in: query
@@ -101,7 +101,7 @@ paths:
         - in: path
           name: datumsangabe
           schema:
-            type: string
+            type: integer
             example: 220228
           required: true
 
@@ -128,14 +128,14 @@ paths:
         - in: query
           name: pageSize
           schema:
-            type: string
+            type: integer
           description: Seite
           example: 0
           required: false
         - in: query
           name: resultPage
           schema:
-            type: string
+            type: integer
           description: Suchergebnisse pro Seite (1-30)
           example: 2
           required: false
