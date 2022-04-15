@@ -9,29 +9,27 @@
 """
 
 
-import sys
 import unittest
 
-from deutschland.tagesschau.model.homepage_response_regional import (
-    HomepageResponseRegional,
-)
+from deutschland.tagesschau.api.search_api import SearchApi  # noqa: E501
 
 from deutschland import tagesschau
 
 
-class TestHomepageResponseRegional(unittest.TestCase):
-    """HomepageResponseRegional unit test stubs"""
+class TestSearchApi(unittest.TestCase):
+    """SearchApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = SearchApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testHomepageResponseRegional(self):
-        """Test HomepageResponseRegional"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = HomepageResponseRegional()  # noqa: E501
+    def test_search(self):
+        """Test case for search
+
+        Suche  # noqa: E501
+        """
         pass
 
 

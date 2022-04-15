@@ -9,29 +9,27 @@
 """
 
 
-import sys
 import unittest
 
-from deutschland.tagesschau.model.homepage_response_regional import (
-    HomepageResponseRegional,
-)
+from deutschland.tagesschau.api.multimedia_api import MultimediaApi  # noqa: E501
 
 from deutschland import tagesschau
 
 
-class TestHomepageResponseRegional(unittest.TestCase):
-    """HomepageResponseRegional unit test stubs"""
+class TestMultimediaApi(unittest.TestCase):
+    """MultimediaApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = MultimediaApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testHomepageResponseRegional(self):
-        """Test HomepageResponseRegional"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = HomepageResponseRegional()  # noqa: E501
+    def test_multimedia(self):
+        """Test case for multimedia
+
+        Multimedia  # noqa: E501
+        """
         pass
 
 
