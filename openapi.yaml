@@ -1,9 +1,13 @@
-﻿openapi: "3.0.0"
+openapi: "3.0.0"
 info:
   description: "Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland), die von ARD-aktuell in Hamburg produziert und mehrmals täglich ausgestrahlt wird. ARD-aktuell ist seit 1977 die zentrale Fernsehnachrichtenredaktion der ARD, bei welcher es sich wiederum um einen Rundfunkverbund handelt, der aus den Landesrundfunkanstalten und der Deutschen Welle besteht.<br>Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.<br>"
   version: "2.0.0"
   title: "Tagesschau API"
-
+  contact:
+    name:  "AndreasFischer1985"
+    email: "andreasfischer1985@web.de"
+    url: "https://github.com/AndreasFischer1985/tagesschau-api"
+    
 servers:
   - url: "https://www.tagesschau.de"
 
@@ -14,6 +18,8 @@ paths:
       summary: "Wichtige Nachrichten und Eilmeldungen"
       description: "Wichtige Nachrichten und Eilmeldungen, sowie regionale Nachrichten aus dem Pfad '/api2/homepage'. API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind)."
       operationId: "api2"
+      tags:
+        - api2
       responses:
         '200':
             description: OK
@@ -27,6 +33,8 @@ paths:
       summary: "Ausgewählte aktuelle Nachrichten und Eilmeldungen"
       description: "Ausgewählte aktuelle Nachrichten und Eilmeldungen, sowie regionale Nachrichten, die auf der Startseite der Tagesschau-App zu sehen sind."
       operationId: "homepage"
+      tags:
+        - homepage      
       responses:
         '200':
             description: OK
@@ -41,6 +49,8 @@ paths:
       summary: "Aktuelle Nachrichten und Eilmeldungen"
       description: "Aktuelle Nachrichten und Eilmeldungen"
       operationId: "news"
+      tags:
+        - news      
       responses:
         '200':
             description: OK
@@ -94,6 +104,8 @@ paths:
       summary: "Newsfeed"
       description: "Nachrichten und Eilmeldungen zu einem ausgewählten Datum der jüngeren Vergangenheit (bis zu etwa einem Monat) im Format yymmdd (z.B. 220228 für den 28.02.2022)."
       operationId: "newsfeed"
+      tags:
+        - newsfeed      
       responses:
         '200':
             description: OK
@@ -114,6 +126,8 @@ paths:
       summary: "Suche"
       description: "Suche"
       operationId: "search"
+      tags:
+        - search      
       responses:
         '200':
             description: OK
@@ -150,6 +164,8 @@ paths:
       summary: "Ressort-spezifische Nachrichten"
       description: "Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft)."
       operationId: "ressort"
+      tags:
+        - ressort      
       responses:
         '200':
             description: OK
@@ -170,6 +186,8 @@ paths:
       summary: "Aktuelle Kanäle"
       description: "Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache"
       operationId: "channels"
+      tags:
+        - channels      
       responses:
         '200':
             description: OK
@@ -183,6 +201,8 @@ paths:
       summary: "Multimedia"
       description: "Multimedia-Beiträge"
       operationId: "multimedia"
+      tags:
+        - multimedia      
       responses:
         '200':
             description: OK
