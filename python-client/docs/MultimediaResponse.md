@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**news** | [**[NewsResponseNews]**](NewsResponseNews.md) |  | [optional] 
-**regional** | [**[HomepageResponseRegional]**](HomepageResponseRegional.md) |  | [optional] 
+**news** | [**[NewsResponseNewsInner]**](NewsResponseNewsInner.md) |  | [optional] 
+**regional** | [**[HomepageResponseRegionalInner]**](HomepageResponseRegionalInner.md) |  | [optional] 
 **new_stories_count_link** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

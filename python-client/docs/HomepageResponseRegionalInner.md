@@ -1,4 +1,4 @@
-# HomepageResponseRegional
+# HomepageResponseRegionalInner
 
 
 ## Properties

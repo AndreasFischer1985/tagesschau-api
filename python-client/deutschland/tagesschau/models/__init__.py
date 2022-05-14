@@ -10,18 +10,20 @@
 # sys.setrecursionlimit(n)
 
 from deutschland.tagesschau.model.channels_response import ChannelsResponse
-from deutschland.tagesschau.model.channels_response_channels import (
-    ChannelsResponseChannels,
+from deutschland.tagesschau.model.channels_response_channels_inner import (
+    ChannelsResponseChannelsInner,
 )
 from deutschland.tagesschau.model.homepage_response import HomepageResponse
-from deutschland.tagesschau.model.homepage_response_news import HomepageResponseNews
-from deutschland.tagesschau.model.homepage_response_regional import (
-    HomepageResponseRegional,
+from deutschland.tagesschau.model.homepage_response_news_inner import (
+    HomepageResponseNewsInner,
+)
+from deutschland.tagesschau.model.homepage_response_regional_inner import (
+    HomepageResponseRegionalInner,
 )
 from deutschland.tagesschau.model.multimedia_response import MultimediaResponse
 from deutschland.tagesschau.model.news_response import NewsResponse
-from deutschland.tagesschau.model.news_response_news import NewsResponseNews
+from deutschland.tagesschau.model.news_response_news_inner import NewsResponseNewsInner
 from deutschland.tagesschau.model.search_response import SearchResponse
-from deutschland.tagesschau.model.search_response_search_results import (
-    SearchResponseSearchResults,
+from deutschland.tagesschau.model.search_response_search_results_inner import (
+    SearchResponseSearchResultsInner,
 )
