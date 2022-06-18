@@ -41,7 +41,9 @@ class HomepageApi(object):
             settings={
                 "response_type": (HomepageResponse,),
                 "auth": [],
+
                 "endpoint_path": "/api2/homepage/",
+
                 "operation_id": "homepage",
                 "http_method": "GET",
                 "servers": None,

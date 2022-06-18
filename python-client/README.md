@@ -79,6 +79,7 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+
 *Api2Api* | [**api2**](docs/Api2Api.md#api2) | **GET** /api2/ | Wichtige Nachrichten und Eilmeldungen
 *ChannelsApi* | [**channels**](docs/ChannelsApi.md#channels) | **GET** /api2/channels/ | Aktuelle Kanäle
 *HomepageApi* | [**homepage**](docs/HomepageApi.md#homepage) | **GET** /api2/homepage/ | Ausgewählte aktuelle Nachrichten und Eilmeldungen
@@ -87,6 +88,7 @@ Class | Method | HTTP request | Description
 *NewsfeedApi* | [**newsfeed**](docs/NewsfeedApi.md#newsfeed) | **GET** /api2/newsfeed-101~_date-{datumsangabe}.json | Newsfeed
 *RessortApi* | [**ressort**](docs/RessortApi.md#ressort) | **GET** /api2/{ressort}/ | Ressort-spezifische Nachrichten
 *SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /api2/search/ | Suche
+
 
 
 ## Documentation For Models

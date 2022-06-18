@@ -4,7 +4,9 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+
 [**multimedia**](MultimediaApi.md#multimedia) | **GET** /api2/multimedia/ | Multimedia
+
 
 
 # **multimedia**

@@ -41,7 +41,9 @@ class Api2Api(object):
             settings={
                 "response_type": (HomepageResponse,),
                 "auth": [],
+
                 "endpoint_path": "/api2/",
+
                 "operation_id": "api2",
                 "http_method": "GET",
                 "servers": None,
