@@ -22,8 +22,8 @@ sys.path.insert(0, os.path.abspath("../"))
 # -- Project information -----------------------------------------------------
 
 project = "tagesschau-api"
-copyright = "2022, BundesAPI"
-author = "BundesAPI"
+copyright = "2022, AndreasFischer1985"
+author = "AndreasFischer1985"
 
 # The short X.Y version
 version = "0.1.0"

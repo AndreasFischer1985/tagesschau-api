@@ -13,7 +13,7 @@ servers:
 
 paths:
 
-  /api2:
+  /api2/:
     get:
       summary: "Wichtige Nachrichten und Eilmeldungen"
       description: "Wichtige Nachrichten und Eilmeldungen, sowie regionale Nachrichten aus dem Pfad '/api2/homepage'. API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind)."
@@ -28,7 +28,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/HomepageResponse'
 
-  /api2/homepage:
+  /api2/homepage/:
     get:
       summary: "Ausgewählte aktuelle Nachrichten und Eilmeldungen"
       description: "Ausgewählte aktuelle Nachrichten und Eilmeldungen, sowie regionale Nachrichten, die auf der Startseite der Tagesschau-App zu sehen sind."
@@ -44,7 +44,7 @@ paths:
                   $ref: '#/components/schemas/HomepageResponse'
 
 
-  /api2/news:
+  /api2/news/:
     get:
       summary: "Aktuelle Nachrichten und Eilmeldungen"
       description: "Aktuelle Nachrichten und Eilmeldungen"
@@ -121,7 +121,7 @@ paths:
             example: 220228
           required: true
 
-  /api2/search:
+  /api2/search/:
     get:
       summary: "Suche"
       description: "Suche"
@@ -159,7 +159,7 @@ paths:
           example: 2
           required: false
 
-  /api2/{ressort}:
+  /api2/{ressort}/:
     get:
       summary: "Ressort-spezifische Nachrichten"
       description: "Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft)."
@@ -181,7 +181,7 @@ paths:
             example: ausland
           required: true
 
-  /api2/channels:
+  /api2/channels/:
     get:
       summary: "Aktuelle Kanäle"
       description: "Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache"
@@ -196,7 +196,7 @@ paths:
                 schema:
                   $ref: '#/components/schemas/ChannelsResponse'
 
-  /api2/multimedia:
+  /api2/multimedia/:
     get:
       summary: "Multimedia"
       description: "Multimedia-Beiträge"

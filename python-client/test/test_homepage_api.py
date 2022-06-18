@@ -9,34 +9,27 @@
 """
 
 
-import sys
 import unittest
 
-from deutschland.tagesschau.model.homepage_response_regional_inner import (
-    HomepageResponseRegionalInner,
-)
-from deutschland.tagesschau.model.news_response_news_inner import NewsResponseNewsInner
+from deutschland.tagesschau.api.homepage_api import HomepageApi  # noqa: E501
 
 from deutschland import tagesschau
 
-globals()["HomepageResponseRegionalInner"] = HomepageResponseRegionalInner
-globals()["NewsResponseNewsInner"] = NewsResponseNewsInner
-from deutschland.tagesschau.model.multimedia_response import MultimediaResponse
 
-
-class TestMultimediaResponse(unittest.TestCase):
-    """MultimediaResponse unit test stubs"""
+class TestHomepageApi(unittest.TestCase):
+    """HomepageApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = HomepageApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testMultimediaResponse(self):
-        """Test MultimediaResponse"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = MultimediaResponse()  # noqa: E501
+    def test_homepage(self):
+        """Test case for homepage
+
+        Ausgewählte aktuelle Nachrichten und Eilmeldungen  # noqa: E501
+        """
         pass
 
 
