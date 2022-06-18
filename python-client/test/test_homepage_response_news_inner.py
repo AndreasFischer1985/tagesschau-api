@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.channels_response_channels import (
-    ChannelsResponseChannels,
+from deutschland.tagesschau.model.homepage_response_news_inner import (
+    HomepageResponseNewsInner,
 )
 
 from deutschland import tagesschau
 
 
-class TestChannelsResponseChannels(unittest.TestCase):
-    """ChannelsResponseChannels unit test stubs"""
+class TestHomepageResponseNewsInner(unittest.TestCase):
+    """HomepageResponseNewsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestChannelsResponseChannels(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testChannelsResponseChannels(self):
-        """Test ChannelsResponseChannels"""
+    def testHomepageResponseNewsInner(self):
+        """Test HomepageResponseNewsInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ChannelsResponseChannels()  # noqa: E501
+        # model = HomepageResponseNewsInner()  # noqa: E501
         pass
 
 

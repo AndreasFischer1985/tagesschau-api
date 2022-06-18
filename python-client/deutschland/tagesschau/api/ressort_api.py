@@ -41,7 +41,7 @@ class RessortApi(object):
             settings={
                 "response_type": (NewsResponse,),
                 "auth": [],
-                "endpoint_path": "/api2/{ressort}",
+                "endpoint_path": "/api2/{ressort}/",
                 "operation_id": "ressort",
                 "http_method": "GET",
                 "servers": None,

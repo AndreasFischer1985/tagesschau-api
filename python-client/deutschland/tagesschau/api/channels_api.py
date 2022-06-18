@@ -41,7 +41,7 @@ class ChannelsApi(object):
             settings={
                 "response_type": (ChannelsResponse,),
                 "auth": [],
-                "endpoint_path": "/api2/channels",
+                "endpoint_path": "/api2/channels/",
                 "operation_id": "channels",
                 "http_method": "GET",
                 "servers": None,

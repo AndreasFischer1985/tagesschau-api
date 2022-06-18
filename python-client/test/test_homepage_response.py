@@ -12,15 +12,17 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.homepage_response_news import HomepageResponseNews
-from deutschland.tagesschau.model.homepage_response_regional import (
-    HomepageResponseRegional,
+from deutschland.tagesschau.model.homepage_response_news_inner import (
+    HomepageResponseNewsInner,
+)
+from deutschland.tagesschau.model.homepage_response_regional_inner import (
+    HomepageResponseRegionalInner,
 )
 
 from deutschland import tagesschau
 
-globals()["HomepageResponseNews"] = HomepageResponseNews
-globals()["HomepageResponseRegional"] = HomepageResponseRegional
+globals()["HomepageResponseNewsInner"] = HomepageResponseNewsInner
+globals()["HomepageResponseRegionalInner"] = HomepageResponseRegionalInner
 from deutschland.tagesschau.model.homepage_response import HomepageResponse
 
 

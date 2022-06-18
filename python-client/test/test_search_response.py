@@ -12,13 +12,13 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.search_response_search_results import (
-    SearchResponseSearchResults,
+from deutschland.tagesschau.model.search_response_search_results_inner import (
+    SearchResponseSearchResultsInner,
 )
 
 from deutschland import tagesschau
 
-globals()["SearchResponseSearchResults"] = SearchResponseSearchResults
+globals()["SearchResponseSearchResultsInner"] = SearchResponseSearchResultsInner
 from deutschland.tagesschau.model.search_response import SearchResponse
 
 

@@ -41,7 +41,7 @@ class SearchApi(object):
             settings={
                 "response_type": (SearchResponse,),
                 "auth": [],
-                "endpoint_path": "/api2/search",
+                "endpoint_path": "/api2/search/",
                 "operation_id": "search",
                 "http_method": "GET",
                 "servers": None,

@@ -12,13 +12,15 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.news_response_news import NewsResponseNews
+from deutschland.tagesschau.model.search_response_search_results_inner import (
+    SearchResponseSearchResultsInner,
+)
 
 from deutschland import tagesschau
 
 
-class TestNewsResponseNews(unittest.TestCase):
-    """NewsResponseNews unit test stubs"""
+class TestSearchResponseSearchResultsInner(unittest.TestCase):
+    """SearchResponseSearchResultsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +28,10 @@ class TestNewsResponseNews(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testNewsResponseNews(self):
-        """Test NewsResponseNews"""
+    def testSearchResponseSearchResultsInner(self):
+        """Test SearchResponseSearchResultsInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = NewsResponseNews()  # noqa: E501
+        # model = SearchResponseSearchResultsInner()  # noqa: E501
         pass
 
 

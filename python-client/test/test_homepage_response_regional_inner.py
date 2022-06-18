@@ -12,13 +12,15 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.homepage_response_news import HomepageResponseNews
+from deutschland.tagesschau.model.homepage_response_regional_inner import (
+    HomepageResponseRegionalInner,
+)
 
 from deutschland import tagesschau
 
 
-class TestHomepageResponseNews(unittest.TestCase):
-    """HomepageResponseNews unit test stubs"""
+class TestHomepageResponseRegionalInner(unittest.TestCase):
+    """HomepageResponseRegionalInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +28,10 @@ class TestHomepageResponseNews(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testHomepageResponseNews(self):
-        """Test HomepageResponseNews"""
+    def testHomepageResponseRegionalInner(self):
+        """Test HomepageResponseRegionalInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = HomepageResponseNews()  # noqa: E501
+        # model = HomepageResponseRegionalInner()  # noqa: E501
         pass
 
 

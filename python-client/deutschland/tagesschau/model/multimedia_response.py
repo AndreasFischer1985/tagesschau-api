@@ -31,13 +31,15 @@ from deutschland.tagesschau.model_utils import (  # noqa: F401
 
 
 def lazy_import():
-    from deutschland.tagesschau.model.homepage_response_regional import (
-        HomepageResponseRegional,
+    from deutschland.tagesschau.model.homepage_response_regional_inner import (
+        HomepageResponseRegionalInner,
     )
-    from deutschland.tagesschau.model.news_response_news import NewsResponseNews
+    from deutschland.tagesschau.model.news_response_news_inner import (
+        NewsResponseNewsInner,
+    )
 
-    globals()["HomepageResponseRegional"] = HomepageResponseRegional
-    globals()["NewsResponseNews"] = NewsResponseNews
+    globals()["HomepageResponseRegionalInner"] = HomepageResponseRegionalInner
+    globals()["NewsResponseNewsInner"] = NewsResponseNewsInner
 
 
 class MultimediaResponse(ModelNormal):
@@ -101,8 +103,8 @@ class MultimediaResponse(ModelNormal):
         """
         lazy_import()
         return {
-            "news": ([NewsResponseNews],),  # noqa: E501
-            "regional": ([HomepageResponseRegional],),  # noqa: E501
+            "news": ([NewsResponseNewsInner],),  # noqa: E501
+            "regional": ([HomepageResponseRegionalInner],),  # noqa: E501
             "new_stories_count_link": (str,),  # noqa: E501
             "type": (str,),  # noqa: E501
         }
@@ -158,8 +160,8 @@ class MultimediaResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            news ([NewsResponseNews]): [optional]  # noqa: E501
-            regional ([HomepageResponseRegional]): [optional]  # noqa: E501
+            news ([NewsResponseNewsInner]): [optional]  # noqa: E501
+            regional ([HomepageResponseRegionalInner]): [optional]  # noqa: E501
             new_stories_count_link (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
@@ -252,8 +254,8 @@ class MultimediaResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            news ([NewsResponseNews]): [optional]  # noqa: E501
-            regional ([HomepageResponseRegional]): [optional]  # noqa: E501
+            news ([NewsResponseNewsInner]): [optional]  # noqa: E501
+            regional ([HomepageResponseRegionalInner]): [optional]  # noqa: E501
             new_stories_count_link (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """

@@ -31,11 +31,11 @@ from deutschland.tagesschau.model_utils import (  # noqa: F401
 
 
 def lazy_import():
-    from deutschland.tagesschau.model.channels_response_channels import (
-        ChannelsResponseChannels,
+    from deutschland.tagesschau.model.channels_response_channels_inner import (
+        ChannelsResponseChannelsInner,
     )
 
-    globals()["ChannelsResponseChannels"] = ChannelsResponseChannels
+    globals()["ChannelsResponseChannelsInner"] = ChannelsResponseChannelsInner
 
 
 class ChannelsResponse(ModelNormal):
@@ -99,7 +99,7 @@ class ChannelsResponse(ModelNormal):
         """
         lazy_import()
         return {
-            "channels": ([ChannelsResponseChannels],),  # noqa: E501
+            "channels": ([ChannelsResponseChannelsInner],),  # noqa: E501
             "type": (str,),  # noqa: E501
         }
 
@@ -152,7 +152,7 @@ class ChannelsResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            channels ([ChannelsResponseChannels]): [optional]  # noqa: E501
+            channels ([ChannelsResponseChannelsInner]): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 
@@ -244,7 +244,7 @@ class ChannelsResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            channels ([ChannelsResponseChannels]): [optional]  # noqa: E501
+            channels ([ChannelsResponseChannelsInner]): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
 

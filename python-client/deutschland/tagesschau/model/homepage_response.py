@@ -31,13 +31,15 @@ from deutschland.tagesschau.model_utils import (  # noqa: F401
 
 
 def lazy_import():
-    from deutschland.tagesschau.model.homepage_response_news import HomepageResponseNews
-    from deutschland.tagesschau.model.homepage_response_regional import (
-        HomepageResponseRegional,
+    from deutschland.tagesschau.model.homepage_response_news_inner import (
+        HomepageResponseNewsInner,
+    )
+    from deutschland.tagesschau.model.homepage_response_regional_inner import (
+        HomepageResponseRegionalInner,
     )
 
-    globals()["HomepageResponseNews"] = HomepageResponseNews
-    globals()["HomepageResponseRegional"] = HomepageResponseRegional
+    globals()["HomepageResponseNewsInner"] = HomepageResponseNewsInner
+    globals()["HomepageResponseRegionalInner"] = HomepageResponseRegionalInner
 
 
 class HomepageResponse(ModelNormal):
@@ -101,8 +103,8 @@ class HomepageResponse(ModelNormal):
         """
         lazy_import()
         return {
-            "news": ([HomepageResponseNews],),  # noqa: E501
-            "regional": ([HomepageResponseRegional],),  # noqa: E501
+            "news": ([HomepageResponseNewsInner],),  # noqa: E501
+            "regional": ([HomepageResponseRegionalInner],),  # noqa: E501
             "new_stories_count_link": (str,),  # noqa: E501
             "type": (str,),  # noqa: E501
         }
@@ -158,8 +160,8 @@ class HomepageResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            news ([HomepageResponseNews]): [optional]  # noqa: E501
-            regional ([HomepageResponseRegional]): [optional]  # noqa: E501
+            news ([HomepageResponseNewsInner]): [optional]  # noqa: E501
+            regional ([HomepageResponseRegionalInner]): [optional]  # noqa: E501
             new_stories_count_link (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """
@@ -252,8 +254,8 @@ class HomepageResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            news ([HomepageResponseNews]): [optional]  # noqa: E501
-            regional ([HomepageResponseRegional]): [optional]  # noqa: E501
+            news ([HomepageResponseNewsInner]): [optional]  # noqa: E501
+            regional ([HomepageResponseRegionalInner]): [optional]  # noqa: E501
             new_stories_count_link (str): [optional]  # noqa: E501
             type (str): [optional]  # noqa: E501
         """

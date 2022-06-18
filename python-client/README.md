@@ -79,28 +79,28 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Api2Api* | [**api2**](docs/Api2Api.md#api2) | **GET** /api2 | Wichtige Nachrichten und Eilmeldungen
-*ChannelsApi* | [**channels**](docs/ChannelsApi.md#channels) | **GET** /api2/channels | Aktuelle Kanäle
-*HomepageApi* | [**homepage**](docs/HomepageApi.md#homepage) | **GET** /api2/homepage | Ausgewählte aktuelle Nachrichten und Eilmeldungen
-*MultimediaApi* | [**multimedia**](docs/MultimediaApi.md#multimedia) | **GET** /api2/multimedia | Multimedia
-*NewsApi* | [**news**](docs/NewsApi.md#news) | **GET** /api2/news | Aktuelle Nachrichten und Eilmeldungen
+*Api2Api* | [**api2**](docs/Api2Api.md#api2) | **GET** /api2/ | Wichtige Nachrichten und Eilmeldungen
+*ChannelsApi* | [**channels**](docs/ChannelsApi.md#channels) | **GET** /api2/channels/ | Aktuelle Kanäle
+*HomepageApi* | [**homepage**](docs/HomepageApi.md#homepage) | **GET** /api2/homepage/ | Ausgewählte aktuelle Nachrichten und Eilmeldungen
+*MultimediaApi* | [**multimedia**](docs/MultimediaApi.md#multimedia) | **GET** /api2/multimedia/ | Multimedia
+*NewsApi* | [**news**](docs/NewsApi.md#news) | **GET** /api2/news/ | Aktuelle Nachrichten und Eilmeldungen
 *NewsfeedApi* | [**newsfeed**](docs/NewsfeedApi.md#newsfeed) | **GET** /api2/newsfeed-101~_date-{datumsangabe}.json | Newsfeed
-*RessortApi* | [**ressort**](docs/RessortApi.md#ressort) | **GET** /api2/{ressort} | Ressort-spezifische Nachrichten
-*SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /api2/search | Suche
+*RessortApi* | [**ressort**](docs/RessortApi.md#ressort) | **GET** /api2/{ressort}/ | Ressort-spezifische Nachrichten
+*SearchApi* | [**search**](docs/SearchApi.md#search) | **GET** /api2/search/ | Suche
 
 
 ## Documentation For Models
 
  - [ChannelsResponse](docs/ChannelsResponse.md)
- - [ChannelsResponseChannels](docs/ChannelsResponseChannels.md)
+ - [ChannelsResponseChannelsInner](docs/ChannelsResponseChannelsInner.md)
  - [HomepageResponse](docs/HomepageResponse.md)
- - [HomepageResponseNews](docs/HomepageResponseNews.md)
- - [HomepageResponseRegional](docs/HomepageResponseRegional.md)
+ - [HomepageResponseNewsInner](docs/HomepageResponseNewsInner.md)
+ - [HomepageResponseRegionalInner](docs/HomepageResponseRegionalInner.md)
  - [MultimediaResponse](docs/MultimediaResponse.md)
  - [NewsResponse](docs/NewsResponse.md)
- - [NewsResponseNews](docs/NewsResponseNews.md)
+ - [NewsResponseNewsInner](docs/NewsResponseNewsInner.md)
  - [SearchResponse](docs/SearchResponse.md)
- - [SearchResponseSearchResults](docs/SearchResponseSearchResults.md)
+ - [SearchResponseSearchResultsInner](docs/SearchResponseSearchResultsInner.md)
 
 
 ## Documentation For Authorization

@@ -31,11 +31,11 @@ from deutschland.tagesschau.model_utils import (  # noqa: F401
 
 
 def lazy_import():
-    from deutschland.tagesschau.model.search_response_search_results import (
-        SearchResponseSearchResults,
+    from deutschland.tagesschau.model.search_response_search_results_inner import (
+        SearchResponseSearchResultsInner,
     )
 
-    globals()["SearchResponseSearchResults"] = SearchResponseSearchResults
+    globals()["SearchResponseSearchResultsInner"] = SearchResponseSearchResultsInner
 
 
 class SearchResponse(ModelNormal):
@@ -111,7 +111,7 @@ class SearchResponse(ModelNormal):
             "query": (str,),  # noqa: E501
             "total_item_count": (int,),  # noqa: E501
             "solr_query": (str,),  # noqa: E501
-            "search_results": ([SearchResponseSearchResults],),  # noqa: E501
+            "search_results": ([SearchResponseSearchResultsInner],),  # noqa: E501
         }
 
     @cached_property
@@ -182,7 +182,7 @@ class SearchResponse(ModelNormal):
             query (str): [optional]  # noqa: E501
             total_item_count (int): [optional]  # noqa: E501
             solr_query (str): [optional]  # noqa: E501
-            search_results ([SearchResponseSearchResults]): [optional]  # noqa: E501
+            search_results ([SearchResponseSearchResultsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop("_check_type", True)
@@ -283,7 +283,7 @@ class SearchResponse(ModelNormal):
             query (str): [optional]  # noqa: E501
             total_item_count (int): [optional]  # noqa: E501
             solr_query (str): [optional]  # noqa: E501
-            search_results ([SearchResponseSearchResults]): [optional]  # noqa: E501
+            search_results ([SearchResponseSearchResultsInner]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop("_check_type", True)

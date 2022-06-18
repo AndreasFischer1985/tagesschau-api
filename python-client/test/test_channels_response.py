@@ -12,13 +12,13 @@
 import sys
 import unittest
 
-from deutschland.tagesschau.model.channels_response_channels import (
-    ChannelsResponseChannels,
+from deutschland.tagesschau.model.channels_response_channels_inner import (
+    ChannelsResponseChannelsInner,
 )
 
 from deutschland import tagesschau
 
-globals()["ChannelsResponseChannels"] = ChannelsResponseChannels
+globals()["ChannelsResponseChannelsInner"] = ChannelsResponseChannelsInner
 from deutschland.tagesschau.model.channels_response import ChannelsResponse
 
 

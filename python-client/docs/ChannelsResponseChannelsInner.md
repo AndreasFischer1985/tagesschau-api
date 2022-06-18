@@ -1,4 +1,4 @@
-# ChannelsResponseChannels
+# ChannelsResponseChannelsInner
 
 
 ## Properties

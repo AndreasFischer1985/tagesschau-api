@@ -12,10 +12,10 @@ tagesschau.model.channels\_response module
    :undoc-members:
    :show-inheritance:
 
-tagesschau.model.channels\_response\_channels module
-----------------------------------------------------
+tagesschau.model.channels\_response\_channels\_inner module
+-----------------------------------------------------------
 
-.. automodule:: tagesschau.model.channels_response_channels
+.. automodule:: tagesschau.model.channels_response_channels_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -28,18 +28,18 @@ tagesschau.model.homepage\_response module
    :undoc-members:
    :show-inheritance:
 
-tagesschau.model.homepage\_response\_news module
-------------------------------------------------
+tagesschau.model.homepage\_response\_news\_inner module
+-------------------------------------------------------
 
-.. automodule:: tagesschau.model.homepage_response_news
+.. automodule:: tagesschau.model.homepage_response_news_inner
    :members:
    :undoc-members:
    :show-inheritance:
 
-tagesschau.model.homepage\_response\_regional module
-----------------------------------------------------
+tagesschau.model.homepage\_response\_regional\_inner module
+-----------------------------------------------------------
 
-.. automodule:: tagesschau.model.homepage_response_regional
+.. automodule:: tagesschau.model.homepage_response_regional_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -60,10 +60,10 @@ tagesschau.model.news\_response module
    :undoc-members:
    :show-inheritance:
 
-tagesschau.model.news\_response\_news module
---------------------------------------------
+tagesschau.model.news\_response\_news\_inner module
+---------------------------------------------------
 
-.. automodule:: tagesschau.model.news_response_news
+.. automodule:: tagesschau.model.news_response_news_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -76,10 +76,10 @@ tagesschau.model.search\_response module
    :undoc-members:
    :show-inheritance:
 
-tagesschau.model.search\_response\_search\_results module
----------------------------------------------------------
+tagesschau.model.search\_response\_search\_results\_inner module
+----------------------------------------------------------------
 
-.. automodule:: tagesschau.model.search_response_search_results
+.. automodule:: tagesschau.model.search_response_search_results_inner
    :members:
    :undoc-members:
    :show-inheritance:
