@@ -41,7 +41,9 @@ class MultimediaApi(object):
             settings={
                 "response_type": (MultimediaResponse,),
                 "auth": [],
-                "endpoint_path": "/api2/multimedia",
+
+                "endpoint_path": "/api2/multimedia/",
+
                 "operation_id": "multimedia",
                 "http_method": "GET",
                 "servers": None,
