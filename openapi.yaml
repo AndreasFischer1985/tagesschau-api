@@ -219,6 +219,7 @@ components:
       properties:
         news: 
           type: array
+          required: [date,title,content,topline,details,detailsweb,tracking,shareURL,images,teaserImage]
           items:
             type: object
             properties:
