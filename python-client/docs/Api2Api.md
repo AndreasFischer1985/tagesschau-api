@@ -4,9 +4,7 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-
 [**api2**](Api2Api.md#api2) | **GET** /api2/ | Wichtige Nachrichten und Eilmeldungen
-
 
 
 # **api2**

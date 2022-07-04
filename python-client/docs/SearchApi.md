@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**search**](SearchApi.md#search) | **GET** /api2/search/ | Suche
 
 
-
 # **search**
 > SearchResponse search()
 

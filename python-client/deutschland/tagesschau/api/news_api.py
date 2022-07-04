@@ -41,9 +41,7 @@ class NewsApi(object):
             settings={
                 "response_type": (NewsResponse,),
                 "auth": [],
-
                 "endpoint_path": "/api2/news/",
-
                 "operation_id": "news",
                 "http_method": "GET",
                 "servers": None,
