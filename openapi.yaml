@@ -93,7 +93,9 @@ paths:
                 - ausland
                 - wirtschaft
                 - sport
-                - video		
+                - video
+                - investigativ
+                - faktenfinder
           example: ausland
           description: Ressort/Themengebiet
           required: false
