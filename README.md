@@ -57,6 +57,8 @@ Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6
 - wirtschaft
 - sport	
 - video
+- investigativ
+- faktenfinder
 
 Ressort/Themengebiet
 
@@ -92,7 +94,7 @@ Suchergebnisse pro Seite (1-30)
 
 **URL:** https://www.tagesschau.de/api2/{ressort}/
 
-Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland oder wirtschaft) 
+Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland, wirtschaft, sport, video, investigativ, faktenfinder) 
 
 
 ## Channels

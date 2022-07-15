@@ -41,9 +41,7 @@ class NewsApi(object):
             settings={
                 "response_type": (NewsResponse,),
                 "auth": [],
-
                 "endpoint_path": "/api2/news/",
-
                 "operation_id": "news",
                 "http_method": "GET",
                 "servers": None,
@@ -88,6 +86,8 @@ class NewsApi(object):
                         "WIRTSCHAFT": "wirtschaft",
                         "SPORT": "sport",
                         "VIDEO": "video",
+                        "INVESTIGATIV": "investigativ",
+                        "FAKTENFINDER": "faktenfinder",
                     },
                 },
                 "openapi_types": {

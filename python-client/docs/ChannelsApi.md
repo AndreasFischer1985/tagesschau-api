@@ -4,9 +4,7 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-
 [**channels**](ChannelsApi.md#channels) | **GET** /api2/channels/ | Aktuelle Kanäle
-
 
 
 # **channels**
