@@ -86,6 +86,8 @@ class NewsApi(object):
                         "WIRTSCHAFT": "wirtschaft",
                         "SPORT": "sport",
                         "VIDEO": "video",
+                        "INVESTIGATIV": "investigativ",
+                        "FAKTENFINDER": "faktenfinder",
                     },
                 },
                 "openapi_types": {
