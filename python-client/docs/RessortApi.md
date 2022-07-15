@@ -4,9 +4,7 @@ All URIs are relative to *https://www.tagesschau.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-
 [**ressort**](RessortApi.md#ressort) | **GET** /api2/{ressort}/ | Ressort-spezifische Nachrichten
-
 
 
 # **ressort**
