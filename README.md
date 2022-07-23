@@ -6,6 +6,7 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.
 
+**ACHTUNG:** Die Veröffentlichung der Inhalte ist in der Regel nicht gestattet.
 
 ## API2
 
