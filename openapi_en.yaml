@@ -2,7 +2,9 @@
 info:
   description: "The Tagesschau is a news program of the ARD (abbreviation for 'Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland’), which is produced by ARD-aktuell in Hamburg and broadcast several times a day. ARD-aktuell has been the central television news department of ARD since 1977, which in turn is a broadcasting association consisting of the state broadcasting corporations and Deutsche Welle.
 <br>
-Current news and media articles are available in JSON format on [www.tagesschau.de](https://www.tagesschau.de) via the API documented here.<br>"
+Current news and media articles are available in JSON format on [www.tagesschau.de](https://www.tagesschau.de) via the API documented here.
+<br>
+Attention: The publication of the content is usually not permitted."
   version: "2.0.0"
   title: "Tagesschau API"
 
