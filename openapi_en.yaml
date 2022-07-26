@@ -7,6 +7,10 @@ Current news and media articles are available in JSON format on [www.tagesschau.
 `Attention:` The use of the content for private, non-commercial use is permitted, but publication is not - with the exception of content that is explicitly under the CC license (https://tagesschau.de/creativecommons). It is not permitted to make more than 60 requests per hour."
   version: "2.0.0"
   title: "Tagesschau API"
+  contact:
+    name:  "AndreasFischer1985"
+    email: "andreasfischer1985@web.de"
+    url: "https://github.com/AndreasFischer1985/tagesschau-api"
 
 servers:
   - url: "https://www.tagesschau.de"
