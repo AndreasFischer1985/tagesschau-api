@@ -6,7 +6,7 @@ The Tagesschau is a news program of the ARD (abbreviation for "Arbeitsgemeinscha
 
 Current news and media articles are available in JSON format on [www.tagesschau.de](https://www.tagesschau.de) via the API documented here.
 
-**ATTENTION:** : The publication of the content is usually not permitted.
+**ATTENTION:** : The use of the content for private, non-commercial use is permitted, but publication is not - with the exception of content that is explicitly under the CC license (https://tagesschau.de/creativecommons). It is not permitted to make more than 60 requests per hour.
 
 ## API2
 
