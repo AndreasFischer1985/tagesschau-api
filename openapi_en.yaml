@@ -1,10 +1,10 @@
 ﻿openapi: "3.0.0"
 info:
   description: "The Tagesschau is a news program of the ARD (abbreviation for 'Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland’), which is produced by ARD-aktuell in Hamburg and broadcast several times a day. ARD-aktuell has been the central television news department of ARD since 1977, which in turn is a broadcasting association consisting of the state broadcasting corporations and Deutsche Welle.
-<br>
+<br><br>
 Current news and media articles are available in JSON format on [www.tagesschau.de](https://www.tagesschau.de) via the API documented here.
-<br>
-Attention: The use of the content for private, non-commercial use is permitted, but publication is not - with the exception of content that is explicitly under the CC license (https://tagesschau.de/creativecommons). It is not permitted to make more than 60 requests per hour."
+<br><br>
+`Attention:` The use of the content for private, non-commercial use is permitted, but publication is not - with the exception of content that is explicitly under the CC license (https://tagesschau.de/creativecommons). It is not permitted to make more than 60 requests per hour."
   version: "2.0.0"
   title: "Tagesschau API"
 
