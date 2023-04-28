@@ -17,19 +17,6 @@ servers:
 
 paths:
 
-  /api2:
-    get:
-      summary: "Important news and breaking news"
-      description: "Important news and breaking news, as well as regional news from path '/api2/homepage'. API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/)."
-      operationId: "api2"
-      responses:
-        '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/HomepageResponse'
-
   /api2/homepage:
     get:
       summary: "Selected news and breaking news"
@@ -98,83 +85,6 @@ paths:
           description: Department/subject area
           required: false
 
-
-  /api2/newsfeed-101~_date-{datumsangabe}.json:
-    get:
-      summary: "Newsfeed"
-      description: "News and breaking news on a selected date in the recent past (up to about a month), filtered using the path parameter **datumsangabe** in the format yymmdd (e.g. 220228 for 02/28/2022)."
-      operationId: "newsfeed"
-      responses:
-        '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/NewsResponse'
-      parameters:
-        - in: path
-          name: datumsangabe
-          schema:
-            type: integer
-            example: 220228
-          required: true
-
-  /api2/search:
-    get:
-      summary: "Search"
-      description: "Search"
-      operationId: "search"
-      responses:
-        '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/SearchResponse'
-      parameters:
- 
-        - in: query
-          name: searchText
-          schema:
-            type: string
-          description: search text
-          example: Ukraine
-          required: false
-        - in: query
-          name: pageSize
-          schema:
-            type: integer
-          description: page
-          example: 0
-          required: false
-        - in: query
-          name: resultPage
-          schema:
-            type: integer
-          description: Search results per page (1-30)
-          example: 2
-          required: false
-
-  /api2/{ressort}:
-    get:
-      summary: "Department-specific messages"
-      description: "Department-specific messages, filtered via the path parameter **ressort** (e.g. inland, ausland or wirtschaft)"
-      operationId: "ressort"
-      responses:
-        '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/NewsResponse'
-      parameters:
-        - in: path
-          name: ressort
-          schema:
-            type: string
-            example: ausland
-          required: true
-
   /api2/channels:
     get:
       summary: "Current channels"
@@ -187,19 +97,6 @@ paths:
               application/json:
                 schema:
                   $ref: '#/components/schemas/ChannelsResponse'
-
-  /api2/multimedia:
-    get:
-      summary: "Multimedia"
-      description: "Multimedia content"
-      operationId: "multimedia"
-      responses:
-        '200':
-            description: OK
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/MultimediaResponse'
 
 components: 
   schemas:    

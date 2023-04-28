@@ -8,14 +8,6 @@ Current news and media articles are available in JSON format on [www.tagesschau.
 
 **ATTENTION:** : The use of the content for private, non-commercial use is permitted, but publication is not - with the exception of content that is explicitly under the CC license (https://tagesschau.de/creativecommons). It is not permitted to make more than 60 requests per hour.
 
-## API2
-
-**URL:** https://www.tagesschau.de/api2/
-
-Important news and breaking news, as well as regional news from path 'api2/homepage/'. 
-
-API2 succeeds the previous API, which according to its own statement has been obsolete since October 1st, 2018 (cf. https://www.tagesschau.de/api/ - although there are still up to date post to be found there, e.g., under https://www.tagesschau.de/api/ inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ and https://www.tagesschau.de/api/regional/).
-
 
 ## Homepage
 
@@ -62,52 +54,11 @@ State: 1=Baden-Württemberg, 2=Bavaria, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Ham
 Department/subject area
 
 
-## Newsfeed
-
-**URL:** https://www.tagesschau.de/api2/newsfeed-101~_date-{datumsangabe}.json
-
-News and breaking news on a selected date in the recent past (up to about a month), filtered using the path parameter **datumsangabe** in the format yymmdd (e.g. 220228 for 02/28/2022").
-
-
-## Search
-
-**URL:** https://www.tagesschau.de/api2/search/
-
-
-**Parameter:** *searchText* 
-
-search text
-
-
-**Parameter:** *resultPage* 
-
-page
-
-
-**Parameter:** *pageSize* 
-
-Search results per page (1-30)
-
-
-## Department
-
-**URL:** https://www.tagesschau.de/api2/{ressort}/
-
-Department-specific messages, filtered via the path parameter **ressort** (e.g. inland, ausland or wirtschaft)
-
-
 ## Channels
 
 **URL:** https://www.tagesschau.de/api2/channels/
 
 Current channels (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)
-
-
-## Multimedia
-
-**URL:** https://www.tagesschau.de/api2/multimedia/
-
-Multimedia content.
 
 
 ## Example

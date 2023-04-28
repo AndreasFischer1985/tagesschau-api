@@ -8,14 +8,6 @@ Die Tagesschau ist eine Nachrichtensendung der ARD (Abkürzung für Arbeitsgemei
 
 **ACHTUNG:** Die Nutzung der Inhalte für den privaten, nicht-kommerziellen Gebrauch ist gestattet, die Veröffentlichung hingegen nicht - mit Ausnahme von Angeboten, die explizit unter der CC-Lizenz stehen (https://tagesschau.de/creativecommons). Es ist unzulässig, mehr als 60 Abrufe pro Stunde zu tätigen.
 
-## API2
-
-**URL:** https://www.tagesschau.de/api2/
-
-Wichtige Nachrichten und Eilmeldungen, sowie regionale Nachrichten aus dem Pfad '/api2/homepage/'. 
-
-API2 tritt die Nachfolge der vorangegangenen API an, die nach eigenen Angaben seit 01.10.2018 obsolet ist (vgl. https://www.tagesschau.de/api/ - obwohl z.B. unter https://www.tagesschau.de/api/inland/, https://www.tagesschau.de/api/ausland/, https://www.tagesschau.de/api/wirtschaft/ und https://www.tagesschau.de/api/regional/ durchaus noch aktuelle Beiträge zu finden sind).
-
 
 ## Homepage
 
@@ -64,52 +56,11 @@ Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6
 Ressort/Themengebiet
 
 
-## Newsfeed
-
-**URL:** https://www.tagesschau.de/api2/newsfeed-101~_date-{datumsangabe}.json
-
-Nachrichten und Eilmeldungen zum ausgewählten Datum, gefiltert über den Pfad-Parameter **datumsangabe** im Format yymmdd (z.B. 220228 für den 28.02.2022").
-
-
-## Search
-
-**URL:** https://www.tagesschau.de/api2/search/
-
-
-**Parameter:** *searchText* 
-
-Suchtext
-
-
-**Parameter:** *resultPage* 
-
-Seite
-
-
-**Parameter:** *pageSize* 
-
-Suchergebnisse pro Seite (1-30)
-
-
-## Ressorts
-
-**URL:** https://www.tagesschau.de/api2/{ressort}/
-
-Ressort-spezifische Nachrichten, gefiltert über den Pfad-Parameter **ressort** (z.B. inland, ausland, wirtschaft, sport, video, investigativ, faktenfinder) 
-
-
 ## Channels
 
 **URL:** https://www.tagesschau.de/api2/channels/
 
 Aktuelle Kanäle (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)
-
-
-## Multimedia
-
-**URL:** https://www.tagesschau.de/api2/multimedia/
-
-Multimedia-Beiträge.
 
 
 ## Beispiel
