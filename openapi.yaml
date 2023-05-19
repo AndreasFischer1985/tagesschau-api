@@ -84,7 +84,7 @@ paths:
                 - sport
                 - video
                 - investigativ
-                - faktenfinder
+                - wissen
           example: ausland
           description: Ressort/Themengebiet
           required: false

@@ -50,6 +50,8 @@ State: 1=Baden-Württemberg, 2=Bavaria, 3=Berlin, 4=Brandenburg, 5=Bremen, 6=Ham
 - wirtschaft
 - sport	
 - video
+- investigativ
+- wissen
 
 Department/subject area
 
