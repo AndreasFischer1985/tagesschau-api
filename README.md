@@ -51,7 +51,7 @@ Bundesland: 1=Baden-Württemberg, 2=Bayern, 3=Berlin, 4=Brandenburg, 5=Bremen, 6
 - sport	
 - video
 - investigativ
-- faktenfinder
+- wissen
 
 Ressort/Themengebiet
 

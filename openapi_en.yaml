@@ -80,7 +80,7 @@ paths:
                 - sport
                 - video
                 - investigativ
-                - faktenfinder
+                - wissen
           example: ausland
           description: Department/subject area
           required: false
