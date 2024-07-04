@@ -5,7 +5,7 @@ info:
 Über die hier dokumentierte API stehen auf [www.tagesschau.de](https://www.tagesschau.de) aktuelle Nachrichten und Medienbeiträge im JSON-Format zur Verfügung.
 <br><br>
 **Achtung:** Die Nutzung der Inhalte für den privaten, nicht-kommerziellen Gebrauch ist gestattet, die Veröffentlichung hingegen nicht - mit Ausnahme von Angeboten, die explizit unter der CC-Lizenz stehen (https://tagesschau.de/creativecommons). Es ist unzulässig, mehr als 60 Abrufe pro Stunde zu tätigen."
-  version: "2.0.0"
+  version: "2.0.1"
   title: "Tagesschau API"
   contact:
     name:  "AndreasFischer1985"
