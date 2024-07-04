@@ -11,14 +11,14 @@ Current news and media articles are available in JSON format on [www.tagesschau.
 
 ## Homepage
 
-**URL:** https://www.tagesschau.de/api2/homepage/
+**URL:** https://www.tagesschau.de/api2u/homepage/
 
 Selected news and breaking news that are shown on the homepage of the Tagesschau app.
 
 
 ## News
 
-**URL:** https://www.tagesschau.de/api2/news/
+**URL:** https://www.tagesschau.de/api2u/news/
 
 Current news that can be filtered via GET parameters:
 
@@ -58,14 +58,14 @@ Department/subject area
 
 ## Channels
 
-**URL:** https://www.tagesschau.de/api2/channels/
+**URL:** https://www.tagesschau.de/api2u/channels/
 
 Current channels (im Livestream: tagesschau24, tagesschau in 100 Sekunden, tagesschau, tagesschau 20 Uhr, tagesthemen, nachtmagazin, Bericht aus Berlin, tagesschau vor 20 Jahren, tagesschau mit Gebärdensprache)
 
 
 ## Search
 
-**URL:** https://www.tagesschau.de/api2/search/
+**URL:** https://www.tagesschau.de/api2u/search/
 
 
 **Parameter:** *searchText* 
